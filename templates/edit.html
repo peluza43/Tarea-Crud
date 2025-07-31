@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><title>Editar Alumno</title></head>
+<body>
+    <h1>Editar Alumno</h1>
+    <form method="post">
+        Nombre: <input type="text" name="nombre" value="{{ alumno[1] }}" required><br>
+        Apellido: <input type="text" name="apellido" value="{{ alumno[2] }}" required><br>
+        Edad: <input type="number" name="edad" value="{{ alumno[3] }}" required><br>
+        <input type="submit" value="Actualizar">
+    </form>
+    <a href="/">Regresar</a>
+</body>
+</html>

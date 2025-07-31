@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><title>Lista de Alumnos</title></head>
+<body>
+    <h1>Lista de Alumnos</h1>
+    <a href="/create">Agregar Alumno</a>
+    <table border="1">
+        <tr><th>ID</th><th>Nombre</th><th>Apellido</th><th>Edad</th><th>Acciones</th></tr>
+        {% for alumno in alumnos %}
+        <tr>
+            <td>{{ alumno[0] }}</td>
+            <td>{{ alumno[1] }}</td>
+            <td>{{ alumno[2] }}</td>
+            <td>{{ alumno[3] }}</td>
+            <td>
+                <a href="/edit/{{ alumno[0] }}">Editar</a> |
+                <a href="/delete/{{ alumno[0] }}">Eliminar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
